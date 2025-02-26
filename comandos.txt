@@ -103,7 +103,10 @@ para realizar los test: php artisan test
 
 Comandos de livewire: php artisan make:livewire BuscadorAlumnos
 
-
+Cuando el parametro no coincide con el convenio:
+Route::resource('autobuses', 'AutobusController')->parameters([
+    'autobuses' => 'bus'
+]);
 
 
 
