@@ -28,7 +28,11 @@ composer require laravel/breeze --dev
 
 php artisan breeze:install
 
+Para que funcione tailwind con Livewire:
+en el fichero de tailwind.config.js se añade esta linea  './resources/*/.{html,js,php}',
+
 hacer migraciones: php artisan migrate
+crea un migracion con  el nombre de la tabla: php artisan make:migration add_column_users --table=users
 
 deshacer migraciones: php artisan migrate:rollback
 deshacer todas las migraciones: php artisan migrate:reset
@@ -93,8 +97,7 @@ $canciones = Cancion::with('albumes.artistas')->paginate(2);
 en la vista(para las pestañas):
 <div> {{ $canciones->links() }} <\div>
 
-Para que funcione tailwind con Livewire:
-en el fichero de tailwind.config.js se añade esta linea  './resources/*/.{html,js,php}',
+
 
 Pruebas:
 
